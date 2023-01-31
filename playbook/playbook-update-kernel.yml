@@ -1,0 +1,17 @@
+  - name: Script update and restart
+    hosts: all
+    gather_facts: false
+    tasks:
+
+      - name: Run command updade
+        command: sudo yum update -y
+                                                     
+      - name: Ansible check directory exists
+        command: uname -r
+        register: kernel
+
+      - debug:
+          msg: "{{ kernel.stdout }}"
+
+      - name: Desliga maquinas
+        command: shutdown -r

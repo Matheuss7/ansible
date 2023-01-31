@@ -1,0 +1,7 @@
+1 - alterar o Remote user dentro do ansible.cfg
+2 - enviar a chave para todos os hosts
+3 - incluir o ip ou dns dos hosts dentro do arquivo hosts
+4 - inserir os scripts dentro da pasta playbook
+5 - executar de dentro da pasta onde o ansible.cfg esta
+6 - executar o ansible com o comando "ansible-playbook  -i hosts --key-file=mudar-chave playbook/playbook.....yml" 
+obs: trocar a o nome da chave no passo 6

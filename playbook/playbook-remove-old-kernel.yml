@@ -1,0 +1,7 @@
+  - name: Script remove old kernel
+    hosts: all
+    gather_facts: false
+    tasks:
+
+      - name: Run command remove old kernel
+        command: dnf remove --oldinstallonly --setopt installonly_limit=2 kernel -y

@@ -1,0 +1,21 @@
+#[localhost]
+#localhost ansible_connection=local ansible_python_interpreter=python3
+[grupo1]
+ip
+ip
+...
+
+[grupo1:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_private_key_file=/etc/ansible/ansible_rsa
+
+[grupo2]
+ip
+ip
+...
+
+[grupo2:vars]
+ansible_python_interpreter=/usr/bin/python2
+
+
+#arquivo ta dividido em grupo1 e grupo2, pois pode ser que alguns hosts respondao ao python2 e outros ao python3, entao seria so alterar o grupo.
